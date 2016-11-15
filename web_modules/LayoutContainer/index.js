@@ -70,9 +70,20 @@ export default class LayoutContainer extends Component {
                 "href": favicon192x192,
                 "sizes": "192x192",
               },
+              {
+                "rel": "stylesheet",
+                "href": "https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.css",
+              },
             ] }
             script={ [
               { "src": "https://cdn.polyfill.io/v2/polyfill.min.js" },
+              { "src": "https://cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js" },
+              { "innerHTML" : `window.docsearch({
+                apiKey: "29d680ce97507c5cd2836c6c74783c05",
+                indexName: "stylelint",
+                inputSelector: "#algolia-doc-search",
+                debug: false,
+              })` },
             ] }
           />
           <div className={ styles.header }>
@@ -91,7 +102,7 @@ export default class LayoutContainer extends Component {
             <Footer />
           </div>
         </div>
-       </GoogleAnalyticsTracker>
+      </GoogleAnalyticsTracker>
     )
   }
 }

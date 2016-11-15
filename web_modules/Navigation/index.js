@@ -51,6 +51,9 @@ export default class Navigation extends Component {
               { "Demo" }
             </Link>
           </li>
+          <li className={ styles.item }>
+            <input id="algolia-doc-search" />
+          </li>
         </ul>
       </nav>
     )
